@@ -1,0 +1,22 @@
+{
+    "metadata": {
+        "name": "LXManga",
+        "author": "Nhocconsr",
+        "version": 1,
+        "source": "https://lxmanga.space",
+        "regexp": "(www.)?lxmanga.space/truyen/[^/]+/?$",
+        "description": "Đọc truyện tranh trên trang lxmanga.space",
+        "locale": "vi_VN",
+        "language": "javascript",
+        "type": "comic",
+        "tag": "nsfw"
+    },
+    "script": {
+        "home": "home.js",
+        "genre": "genre.js",
+        "detail": "detail.js",
+        "search": "search.js",
+        "toc": "toc.js",
+        "chap": "chap.js"
+    }
+}
