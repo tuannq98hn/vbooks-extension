@@ -1,0 +1,13 @@
+{
+    "test_urls": {
+        "detail": "htt ps://lxmanga.space/truyen/midareuchi-69784169e7883",
+        "chapter": "https://lxmanga.space/truyen/midareuchi-69784169e7883/chapter-1-rework",
+        "search": "https://lxmanga.space/?s=midareuchi",
+        "genre": "https://lxmanga.space/the-loai/manga"
+    },
+    "expected_results": {
+        "detail_name": "Midareuchi",
+        "chapter_images_count": ">10",
+        "chapter_image_domain": "s4.lxm anga.xyz"
+    }
+}
