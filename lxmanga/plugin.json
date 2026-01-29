@@ -2,7 +2,7 @@
     "metadata": {
         "name": "LXManga",
         "author": "Nhocconsr",
-        "version": 1,
+        "version": 2,
         "source": "https://lxmanga.space",
         "regexp": "(www.)?lxmanga.space/truyen/[^/]+/?$",
         "description": "Đọc truyện tranh trên trang lxmanga.space",

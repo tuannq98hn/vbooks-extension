@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "author": "Nhocconsr",
+    "author": "TEST",
     "description": "Thích là nhích ^^!"
   },
   "data": [
@@ -438,7 +438,7 @@
       "name": "MeTruyenCv",
       "author": "Nhocconsr",
       "path": "https://raw.githubusercontent.com/tuannq98hn/vbooks-extension/main/metruyencv/plugin.zip",
-      "version": 1,
+      "version": 2,
       "source": "https://metruyencv.com",
       "icon": "https://raw.githubusercontent.com/tuannq98hn/vbooks-extension/main/metruyencv/icon.png",
       "description": "Đọc truyện trên trang metruyencv.com",
@@ -449,7 +449,7 @@
       "name": "LXManga",
       "author": "Nhocconsr",
       "path": "https://raw.githubusercontent.com/tuannq98hn/vbooks-extension/main/lxmanga/plugin.zip",
-      "version": 1,
+      "version": 2,
       "source": "https://lxmanga.space",
       "icon": "https://raw.githubusercontent.com/tuannq98hn/vbooks-extension/main/lxmanga/icon.png",
       "description": "Đọc truyện tranh trên trang lxmanga.space",

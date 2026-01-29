@@ -2,7 +2,7 @@
     "metadata": {
         "name": "MeTruyenCv",
         "author": "Nhocconsr",
-        "version": 1,
+        "version": 2,
         "source": "https://metruyencv.com",
         "regexp": "(www.)?metruyencv.com/truyen/[0-9a-z-]+/?$",
         "description": "Đọc truyện trên trang metruyencv.com",
