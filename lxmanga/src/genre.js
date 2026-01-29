@@ -2,37 +2,40 @@ function execute(url, page) {
     if (!page) page = '1';
 
     const doc = fetch(url + '?page=' + page).html();
-    const el = doc.select(".manga-item");
+    const el = doc.select(".manga-vertical");
     const data = [];
 
     el.forEach(e => {
-        const name = e.select(".manga-name a").text().trim() ||
-            e.select("h3 a").text().trim() ||
-            e.select(".post-title a").text().trim();
-        const link = e.select(".manga-name a").attr("href") ||
-            e.select("h3 a").attr("href") ||
-            e.select(".post-title a").attr("href");
-        const cover = e.select("img").attr("data-src") ||
+        // Manga name is in <a> tag with href to /truyen/...
+        const nameLink = e.select("a[href*='/truyen/']").last();
+        const name = nameLink.text().trim();
+        const link = nameLink.attr("href");
+
+        // Cover image with lazyload
+        const coverDiv = e.select(".cover.lazyload");
+        const cover = coverDiv.attr("data-bg") ||
+            e.select("img").attr("data-src") ||
             e.select("img").attr("src");
-        const description = e.select(".latest-chapter a").first().text().trim() ||
-            e.select(".chapter a").first().text().trim();
+
+        // Latest chapter info
+        const latestChapter = e.select(".latest-chapter a").text().trim();
 
         if (name && link) {
             data.push({
                 name: name,
-                link: link,
+                link: link.startsWith("http") ? link : "https://lxmanga.space" + link,
                 cover: cover,
-                description: description,
+                description: latestChapter,
                 host: "https://lxmanga.space"
             });
         }
     });
 
-    // Check if there's a next page
-    const hasNextPage = doc.select(".pagination .next").size() > 0 ||
-        doc.select(".nav-previous").size() > 0;
+    // Check pagination
+    const nextPage = doc.select("a[rel='next']");
+    const hasNextPage = nextPage.size() > 0;
 
-    if (hasNextPage) {
+    if (hasNextPage && data.length > 0) {
         return Response.success(data, (parseInt(page) + 1).toString());
     } else {
         return Response.success(data);
